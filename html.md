@@ -1,7 +1,7 @@
 1.页面导入样式时，使用link和@import有什么区别？    
 link外部调用  
 &#60;link rel="stylesheet" rev="stylesheet" href="CSS文件" type="text/css" media="all"/&#62;     
-@import外部调用(必须在<style></style>之间使用.     
+@import外部调用(必须在<style></style>之间使用)    
 &#60;style type="text/css" media="screen"&#62;                                  
 @import url("CSS文件");        
 </style>        
