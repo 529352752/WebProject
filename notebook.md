@@ -7,8 +7,7 @@ initial-scale: 允许用户的最小缩放值
 maximum-scale: 允许用户的最大缩放值   
 user-scalable: 是否允许用户进行缩放，值为"no"或者"yes"   
    
-2. position的常用属性   
-   
+2. position的常用属性      
 position:relative   
 相对于自身文档流的位置进行偏移，不会使得元素脱离文档流，不影响元素本身特性   
 position:absolute   
