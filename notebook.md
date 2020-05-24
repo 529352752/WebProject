@@ -1,6 +1,5 @@
-1. meta viewport     
+1. meta viewport  
 用来给开发者控制viewport的大小和缩放   
-
 meta viewport的6个属性  
 width: 设置viewport的宽度，默认视口宽度  
 height: 设置viewport的高度  
