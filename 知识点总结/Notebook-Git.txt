@@ -1,0 +1,13 @@
+Git知识点汇总
+
+Git log 查看提交的历史记录
+Git status 可以列出当前目录所有还没有被git管理的文件和被git管理且被修改但还未提交
+Git reset 版本号 重置到某一个状态（默认情况下是soft）
+Git reset —hard 放弃跟改
+Git reset —soft  保留跟改（可用来合并多次commit）
+Git rebase 将分叉的分支重新合并  https://www.jianshu.com/p/f7ed3dd0d2d8
+
+commit的信息格式
+fix( ) 修改bug时使用
+opt( ) 优化时使用
+feat( ) 增加新功能 
