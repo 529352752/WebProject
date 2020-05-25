@@ -1,0 +1,87 @@
+HTML CSS知识总结
+
+Vertical-align 用来指定行内元素或者表格单元格元素的垂直对齐方式
+常用值: baseline top middle bottom sub super text-top text-bottom % 
+参考效果 https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align
+
+position的常用属性      
+position:relative   
+相对于自身文档流的位置进行偏移，不会使得元素脱离文档流，不影响元素本身特性   
+position:absolute
+相对于最近一个有定位的父元素偏移，使元素完全脱离文档流   
+position:fixed   
+生成固定定位的元素，相当于浏览器窗口进行定位，脱离文档流
+position:static   
+默认值，元素出现在正常的流中   
+position:inhert   
+规定应该从父元素继承position属性的值 
+position:sticky
+粘性定位，该定位基于用户滚动的位置
+
+浮动，绝对定位脱离文档流的区别
+使用float脱离文档流时候，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在周围
+设置了绝对定位后，不仅是旁边的其他盒子无视蓝色div的存在，连盒子里的文本也无视了蓝色div的存在，顶着左上边框定位
+参考效果 https://blog.csdn.net/ParanoidYang/article/details/62062828
+
+cursor鼠标样式
+url:使用的自定义光标的url
+default：默认光标(通常是一个箭头)
+auto: 默认，浏览器设置的光标
+crosshair：光标呈现为十字线
+pointer：呈现为一只手
+move: 此光标指示某对象可被移动
+text: 此光标指示文本
+wait: 指示程序正忙（通常是表或者沙漏）
+help: 指示可用的帮助（通常是一个问号或一个气球）
+
+anchor伪类
+a:link 未访问的链接
+a:visited 已访问过的链接
+a:hover 鼠标划过链接
+a:active 已选中的链接
+a:hover 必须被置于 a:link 和 a:visited 之后才是有效的
+a:active 必须被置于 a:hover 之后才是有效的
+
+
+
+:after 伪元素在元素之后添加内容
+:before 伪元素在元素之前添加内容
+这个伪元素允许创作人员在元素内容的最后面插入生成内容。默认地，这个伪元素是行内元素，不过可以使用属性 display 改变这一点，常用于清除浮动
+必须具有content属性，content的值可以有字符串，attr(attr_name)，url()，counter()
+特点
+不属于文档，js无法操作它，减少dom节点数
+伪元素属于主元素的一部分，点击伪元素触发的是主元素的click事件
+
+雪碧图
+将小图标合并在一起之后的图片称作雪碧图，每个小图标的使用需要配合background-position来获取
+优点
+1. 将多张图片合并到一张图片中，可以减少图片的总大小
+2. 将多张图片合并成一张图片后，下载全部所需的资源，只需一次请求。可以减小建立连接的消耗。
+
+Box-sizing 
+属性定义了user agent应该如何计算一个元素的总宽度和高度
+content-box  是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。
+border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px，那么这100px会包含它的border和padding，内容区的实际宽度是width减去(border + padding)的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。
+border-box不包含margin
+
+Media queries
+@media
+可以针对不同媒体类型定义不同的样式
+在HTML中 媒体查询可用于 <link> <source> <style>
+参考效果 https://www.runoob.com/cssref/css3-pr-mediaquery.html
+
+meta viewport  
+用来给开发者控制viewport的大小和缩放   
+meta viewport的6个属性  
+width: 设置viewport的宽度，默认视口宽度  
+height: 设置viewport的高度  
+initial-scale: 允许用户的最小缩放值   
+maximum-scale: 允许用户的最大缩放值   
+user-scalable: 是否允许用户进行缩放，值为"no"或者"yes"  
+
+
+Flex
+参考资料 http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+
+
+BFC块级上下文

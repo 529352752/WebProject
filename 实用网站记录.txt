@@ -1,0 +1,16 @@
+实用网站记录
+
+https://cssbattle.dev/play/1 用来练习css
+
+https://developer.mozilla.org/en-US/docs/Web/CSS 学习css
+
+https://github.com/gienah-studio/Fafnir/wiki/%E7%90%A6%E5%A7%90%E7%9A%84%E5%A4%A7%E5%AE%9D%E5%89%91-%E2%80%94%E2%80%94-git git的一些内容
+
+
+https://github.com/Docyue/per-Frontend-Interview
+https://github.com/coffe1891/frontend-hard-mode-interview
+https://github.com/jirengu/frontend-interview
+https://github.com/qiu-deqing/FE-learning
+https://github.com/helloqingfeng/Awsome-Front-End-learning-resource
+https://github.com/haizlin/fe-interview
+https://github.com/qiu-deqing/FE-learning 面试题大合集
