@@ -11,6 +11,11 @@
       font-family: "Helvetica", "PingFangSC-Regular", "Arial", "Times New Roman", "微软雅黑", "Microsoft YaHei", sans-serif;
     }
 
+    ul {
+      margin:0;
+      padding:0;
+    }
+
     .ad {
       background: #cb9864;
       height: 35px;
@@ -20,144 +25,418 @@
       justify-content: center;
       font-size: 14px;
     }
-    .nav {
-      position: relative;
-      height: 164px;
-      text-align: center;
 
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
-    .nav1 {
-      height: 33px;
-      margin: 0 20px;  
-      padding: 0px;
+
+    .header-top, .header-bottom {
+      display: flex;
+      justify-content: space-between;
+      width: 1280px;
+      box-sizing: border-box;
+    }
+
+    .header-top {
+      height: 113px;
+      flex-direction: column;
+    }
+
+    .header-top-service-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-list, .user-service-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
       padding-top: 9px;
-
     }
 
-    .nav1 li{
-      font-size:12px;
-      line-height: 33px;
-      vertical-align: middle;
-    }
-
-    .left {
-      float: left;
-      color:rgb(154,154,154);
-    }
-
-    .right {
-      float: right;
-      margin: 0 2%;
-    }
-
-    .position {
-      width: 9px;
-      height: 14px;
-      vertical-align: middle;
-      margin-right: 3px;
-    }
-
-    .nodot {
+    .user-service-list-item, .service-list-item {
       list-style: none;
-    }
-
-    .container {
-      width: 83px;
       padding: 0 10px;
-      margin-right: 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      position: relative;
+      height: 33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .customer {
-      margin: 0 20px;
+    .service-list-item {
+      color: #999;
     }
 
-    .logo {
+    .service-list-item .icon {
+      position: relative;
+      background-image: url(icon.png);
+      background-size: 372px 353px;
+      background-position: -360px -253px; 
+      height: 14px;
+      width: 9px;
+      margin-right: 7px;
+      top: -1px;
+    }
+
+    .mall-query {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-list-item:last-child:after {
+      height: 4px;
+      content: '';
+      width: 4px;
+      background-color: #999;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -9px;
+      transform: translate(0, -50%);
+    }
+
+    .dot:after {
+      height: 4px;
+      content: '';
+      width: 4px;
+      background-color:black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -9px;
+      transform: translate(0, -50%);
+    }
+
+    .header-bottom {
+      border-top: 1px solid #efeded;
+      align-items: center;
+      padding: 0 20px;
+      width: 1320px;
+    }
+
+    .product-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 740px;
+      height: 50px;
+      box-sizing: border-box;
+    }
+
+    .product-list .product-list-item {
+      list-style: none;
+      padding: 0 12px;
+      cursor: pointer;
+      line-height: 50px;
+      font-size: 14px;
+    }
+
+    .product-list .product-list-item:hover {
+      color: #cb9864;
+    }
+
+    .header-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-img {
       width: 283px;
       height: 51px;
-      margin-bottom: 7px;
     }
 
-    .hr {
-      background-color:rgb(239,237,237);
-      border:none;
-      height: 1px;
+    .header-bottom-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 313px;
+      
     }
 
-    .nav2 {
-      padding: 0 20px;
-      margin: 0 auto;
-      margin-top: -9px;
-    }
-
-    .nav2 li{
-      float: left;
-      list-style: none;
-      font-size:14px;
-      line-height: 50px;
-      vertical-align: middle;
-    }
-
-    .nav2-1{
-      margin-right: 10px;
-      width: 52px;
-    }
-    .nav2-2,.nav2-3 {
-      width: 52px;
-      margin: 0 10px;
-    }
-    .nav2-4,.nav2-6 {
-      width: 80px;
-      margin: 0 10px;
-    }
-    .nav2-5,.nav2-7 {
-      width: 108px;
-      margin: 0 10px;
-    }
-    form {
-      position: absolute;
-      right: 0;
-      padding-right: 20px;
-    }
-
-    .search {
-      width: 273px;
-      height: 37px;
-      border: 1px solid #000;
+    .search-input {
+      height: 39px;
+      width: 100%;
+      border: 1px solid black;
+      box-sizing: border-box; /*css 盒模型 的怪异模式*/
+      padding: 5px 30px 5px 9px;
+      outline: none;
       font-size: 14px;
-      padding: 0 0 0 5px;
-      margin-top:5px;
     }
-    .searchbtn {
-      background-color: black;
+
+    .search-btn {
+      background: black;
       width: 38px;
       height: 39px;
-      margin-top:5px;
-      border:none;
-    }
-    .content {
-      background-image: url(content.jpg);
-      background-size:cover;
-      width: 100%;
-      height:346px;
+      position: relative;
+      cursor: pointer;
     }
 
-    .content2 {
-      background-image: url(content2.jpg);
-      background-size:cover;
-      width: 100%;
-      height:463px;
+    .search-btn-icon {
+      background: url('icon.png');
+      background-size: 372px 353px;
+      background-position: -104px -336px;
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    .content3 {
-      background-image: url(content3.jpg);
-      background-size:cover;
+    .main .main-advertisement {
+      display: block;
       width: 100%;
-      height:540px;
     }
 
+    .main .main-feature-list {
+      display: flex;
+      justify-content: space-between;
+      width: 1280px;
+      margin: 0 auto;
+    }
+
+    .main .main-feature{
+      background-color: black;
+      height: 111px;
+      padding: 40px 0;
+    }
+    
+    .main .main-feature-list-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style: none;
+        color: white;
+        height: 91px;
+        padding: 10px 0;
+        width: 25%;
+        text-align: center;
+    }
+
+    .main .line::after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      background:#575757;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .main .icon-lock {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -262px -32px;
+      width: 25px;
+      height: 36px;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .main .icon-car {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -181px -115px;
+      width: 54px;
+      height: 32px;
+      padding-bottom: 4px;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .main .icon-card {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: 0px -208px;
+      width: 42px;
+      height: 30px;
+      padding-bottom: 6px;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .main .icon-phone {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -305px 0px;
+      width: 20px;
+      height: 36px;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .main-feature .feature-text {
+      display: block;
+      margin-top: 15px;
+      height: 40px;
+      padding-bottom: -4px;
+      font-size: 14px;
+    }
+
+    .footer .footer-top{
+      display: flex;
+      justify-content: space-between;
+      width: 1148px;
+      margin: 0 auto;
+      padding: 34px 66px;
+    }
+
+    .footer .footer-list {
+      list-style: none;
+      width: 230px;
+    }
+
+    .footer .footer-list-item {
+      margin-bottom:15px;
+      height: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .footer .title {
+      color: black;
+    }
+
+    .footer .footer-textarea {
+      height: 38px;
+      float: left;
+      box-sizing: border-box;
+      border:1px solid #999;
+      outline: none;
+      margin: 0px;
+      padding: 0px;
+      width: 192px;
+      margin-bottom: 36px;
+
+    }
+
+    .footer .icon-ok {
+      height: 38px;
+      width: 38px;
+      background-color: black;
+      display: inline-block;
+      color:white;
+      text-align: center;
+      line-height: 38px;
+      cursor: pointer;
+      margin-bottom: 36px;
+    }
+
+    .footer .icon-weibo {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -331px -185px;
+      width: 23px;
+      height: 19px;
+      margin-right: 22px;
+      display: inline-block;
+    }
+
+    .footer .icon-wechat {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -242px -279px;
+      width: 25px;
+      height: 19px;
+      display: inline-block;
+    }
+
+    .footer .footer-medias {
+      height: 38px;
+      margin-bottom: 18px;
+    }
+
+    .footer .footer-mid {
+      margin: 12px 0 46px;
+      text-align: center;
+    }
+
+    .footer .footer-logo {
+      width: 436px;
+      height: 79px;
+    }
+
+    .footer .footer-bottom {
+      width: 1240px;
+      height: 90px;
+      background: #f2f2f2;
+      padding: 36px 40px 48px;
+    }
+
+    .footer .footer-bottom-tip {
+      font-size: 12px;
+      text-align: center;
+      margin: 0px 0px 15px 0px;
+    }
+
+    .footer .footer-bottom-code {
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+      list-style: none;
+      margin-bottom: 15px;
+    }
+
+    .footer .footer-bottom-code-item {
+      display: flex;
+      float: left;
+      margin: 0 10px;
+      justify-content: center;
+    }
+
+    .footer .icon-bank {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -305px -224px;
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      margin-right: 7px;
+    }
+
+    .footer .icon-police {
+      background-image: url("icon.png");
+      background-size: 372px 353px;
+      background-position: -305px -174px;
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      margin-right: 7px;
+    }
+
+    .footer .footer-bottom-nav {
+      display: flex;
+      justify-content: center;
+      width: 1240px;
+      height: 14px;
+    }
+
+    .footer .footer-bottom-nav-item {
+      float: left;
+      list-style: none;
+      text-decoration: underline;
+      font-size: 12px;
+      padding: 0 20px;
+      cursor: pointer;
+    }
 
     
 
+
+    
 
   </style>
 </head>
@@ -166,40 +445,145 @@
   <div class="ad">
     <span style="line-height: 35px;">YSL全新自由之水，首款馥奇花香，高定之选，肆意如我。</span>
   </div>
-  <div class="nav">
-      <ul class="nav1">
-        <li class="left nodot"><div class="container"><img class="position" src="position2.png"/><span>专柜查询</span></div></li>
-        <li class="left">客服中心</li>
-        <li class="right">购物袋-0件商品</li>
-        <li class="right">登陆与注册</li>
-        <li class="right nodot">订阅电子杂志</li>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-service-bar">
+        <div class="header-top-left">
+          <ul class="service-list">
+            <li class="service-list-item mall-query">
+                <i class="icon"></i>
+              <span class="text">专柜查询</span>
+            </li>
+            <li class="service-list-item">
+              <span class="text">客服中心</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-top-right">
+          <ul class="user-service-list">
+            <li class="user-service-list-item"><span>订阅电子杂志</span></li>
+            <li class="user-service-list-item"><span class="dot">登陆与注册</span></li>
+            <li class="user-service-list-item"><span class="dot">购物袋-0件商品</span></li>
+          </ul>
+        </div>
+    </div>
+
+      <div class="header-logo">
+        <img class="logo-img" src="logo.png"/>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="header-bottom-left">
+        <ul class="product-list">
+          <li class="product-list-item">彩妆</li>
+          <li class="product-list-item">香水</li>
+          <li class="product-list-item">护肤</li>
+          <li class="product-list-item">尊享礼盒</li>
+          <li class="product-list-item">开业狂欢礼遇</li>
+          <li class="product-list-item">会员中心</li>
+          <li class="product-list-item">私人定制服务</li>
+        </ul>
+      </div>
+
+      <div class="header-bottom-right">
+        <input class="search-input" placeholder="天鹅绒唇釉">
+        <div class="search-btn">
+          <span class="search-btn-icon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div><img class="main-advertisement" src="content.jpg"></div>
+    <div><img class="main-advertisement" src="content2.jpg"></div>
+    <div><img class="main-advertisement" src="content3.jpg"></div>
+    <div><img class="main-advertisement" src="content4.jpg"></div>
+    <div><img class="main-advertisement" src="content5.jpg"></div>
+    <div><img class="main-advertisement" src="content6.jpg"></div>
+    <div><img class="main-advertisement" src="content7.jpg"></div>
+    <div><img class="main-advertisement" src="content8.jpg"></div>
+    <div><img class="main-advertisement" src="content9.jpg"></div>
+
+    <div class="main-feature">
+      <ul class="main-feature-list">
+        <li class="main-feature-list-item line"><i class="icon-lock"></i><span class="feature-text">100%官方正品保证</span></li>
+        <li class="main-feature-list-item line"><i class="icon-car"></i><span class="feature-text">支持多种支付方式</span></li>
+        <li class="main-feature-list-item line"><i class="icon-card"></i><span class="feature-text">专项官网特惠礼遇</span></li>
+        <li class="main-feature-list-item"><i class="icon-phone"></i><span class="feature-text">联系我们<br>电话400-820-6362</span></li>
       </ul>
-      <img class="logo" src="logo.png"/>
-      <br />
-      <hr class="hr"/>
-      <ul class="nav2">
-        <li class="nav2-1">彩妆</li>
-        <li class="nav2-2">香水</li>
-        <li class="nav2-3">护肤</li>
-        <li class="nav2-4">尊享礼盒</li>
-        <li class="nav2-5">天鹅绒俱乐部</li>
-        <li class="nav2-6">会员中心</li>
-        <li class="nav2-7">私人定制服务</li>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+        <div class="top-left-nav">
+          <ul class="footer-list">
+            <li class="footer-list-item title">彩妆</li>
+            <li class="footer-list-item">唇部</li>
+            <li class="footer-list-item">面部</li>
+            <li class="footer-list-item">眼部</li>
+            <li class="footer-list-item">套装及工具</li>
+          </ul>
+        </div>
+        <div class="top-mid-nav">
+          <ul class="footer-list">
+            <li class="footer-list-item title">香水</li>
+            <li class="footer-list-item">女士香水</li>
+            <li class="footer-list-item">男士香水</li>
+          </ul>
+        </div>
+        <div class="top-right-nav">
+          <ul class="footer-list">
+            <li class="footer-list-item title">护肤</li>
+            <li class="footer-list-item">按产品分类</li>
+            <li class="footer-list-item">按功能分类</li>
+            <li class="footer-list-item">按系列分类</li>
+          </ul>
+        </div>
+        <div class="top-left-info">
+          <ul class="footer-list">
+            <li class="footer-list-item title">尊享礼盒</li>
+          </ul>
+        </div>
+        <div class="top-right-info">
+          <ul class="footer-list">
+            <li class="footer-list-item title">订阅电子杂志</li>
+            <li>
+              <input class="footer-textarea" type="text"/><span class="icon-ok">OK</span>
+            </li>
+            <li class="footer-list-item title">关注我们</li>
+            <li class="footer-medias"><i class="icon-weibo"></i><i class="icon-wechat"></i></li>
+            <li class="footer-list-item title">联系我们</li>
+            <li class="footer-list-item title">电话：400-820-6362</li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="footer-mid">
+      <img class="footer-logo" src="logo.png"/>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-tip">国家药监局提示您：请正确认识化妆品的功效，化妆品不能代替药品，不能治疗皮肤病等疾病</p>
+
+      <ul class="footer-bottom-code">
+        <li class="footer-bottom-code-item">© 欧莱雅（中国）有限公司</li>
+        <li class="footer-bottom-code-item"><i class="icon-bank"></i>中国工商    沪ICP备08100043号-28 </li>
+        <li class="footer-bottom-code-item"><i class="icon-police"></i>沪公网安备 31010602001529号</li>
       </ul>
 
-      <form>
-        <span style="float: left"><input class="search" type="text" value="天鹅绒唇釉"/></span>
-        <span><input class="searchbtn" type="submit" /></span>
-      </form>
-  </div>
-  <div>
-    <div class="content"></div>
-    <div class="content2"></div>
-    <div class="content3"></div>
-  </div>
-  <div>bottom block</div>
-  <div>logo</div>
-  <div>info</div>
+      <ul class="footer-bottom-nav">
+        <li class="footer-bottom-nav-item">Cookies政策</li>
+        <li class="footer-bottom-nav-item">使用条款</li>
+        <li class="footer-bottom-nav-item">隐私政策</li>
+        <li class="footer-bottom-nav-item">网站地图</li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>
